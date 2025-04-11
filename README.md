@@ -16,6 +16,41 @@ Este é um projeto de prática em **NestJS**, focado na criação de uma API RES
 - [JWT](https://jwt.io/) — Autenticação baseada em token
 - [Class Validator](https://github.com/typestack/class-validator) — Validações de DTOs
 
+## Pequeno Desenho ASCII das Entities
+
+         +--------------------------+
+         |        VENDEDOR          |
+         |--------------------------|
+         | id                       |
+         | nome                     |
+         | telefone                 |
+         | email                    |
+         +--------------------------+
+                    │ 1
+                    │
+                    │ tem muitos
+                    ▼
+         +--------------------------+
+         |      FABRICANTE          |
+         |--------------------------|
+         | id                       |  <-- Gerado com "fabr_{nanoid()}"
+         | nome                     |
+         | vendedor_id (FK)         |  <-- Referência a VENDEDOR.id
+         +--------------------------+
+                    │ 1
+                    │ (Relacionamento 1:1, conforme anotação)
+                    │
+                    ▼
+         +--------------------------+
+         |         PRODUTO          |
+         |--------------------------|
+         | id                       |  <-- Gerado com "prod_{nanoid()}"
+         | nome                     |
+         | dataDeValidade           |
+         | idFabricante (FK)        |  <-- Referência a FABRICANTE.id
+         +--------------------------+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>

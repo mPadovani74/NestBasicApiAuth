@@ -1,3 +1,21 @@
+Este é um projeto de prática em **NestJS**, focado na criação de uma API REST estruturada, com conceitos fundamentais como:
+
+- 🔐 Autenticação com JWT
+- 🧱 ORM com TypeORM
+- 🧪 Testes básicos
+- 🧾 CRUD de entidades com validação
+- 🗂️ Estrutura de pastas limpa e escalável
+- 📦 Integração com banco de dados PostgreSQL (ou outro)
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- [NestJS](https://nestjs.com/) — Framework para construção de APIs escaláveis em Node.js
+- [TypeORM](https://typeorm.io/) — ORM para manipulação de banco de dados
+- [JWT](https://jwt.io/) — Autenticação baseada em token
+- [Class Validator](https://github.com/typestack/class-validator) — Validações de DTOs
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>

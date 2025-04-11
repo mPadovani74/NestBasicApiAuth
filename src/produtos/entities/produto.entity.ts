@@ -1,4 +1,6 @@
-import { BeforeInsert, Column, Entity, PrimaryColumn } from "typeorm";
+import { Fabricante } from "src/fabricante/entities/fabricante.entity";
+import { BeforeInsert, Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from "typeorm";
+import { EmbeddedMetadata } from "typeorm/metadata/EmbeddedMetadata";
 
 const{ nanoid } = require("nanoid");
 
@@ -12,6 +14,12 @@ export class Produto {
     
     @Column()
     dataDeValidade: string;
+
+    @OneToOne(() => Produto, {onDelete:'SET NULL'})
+    fabricante: Produto;
+
+    @JoinColumn()
+    idFabricante: Fabricante;
 
     @BeforeInsert()
     generateId() {

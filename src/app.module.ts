@@ -3,7 +3,8 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './auth/auth.module';
 import { ProdutosModule } from './produtos/produtos.module';
-
+import { FabricanteModule } from './fabricante/fabricante.module';
+import { VendedorModule } from './vendedor/vendedor.module';
 
 @Module({
   imports: [
@@ -15,6 +16,8 @@ import { ProdutosModule } from './produtos/produtos.module';
     }),
     AuthModule,
     ProdutosModule,
+    FabricanteModule,
+    VendedorModule,
   ],
   controllers: [],
   providers: [],

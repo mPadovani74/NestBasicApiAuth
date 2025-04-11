@@ -5,7 +5,7 @@ Este é um projeto de prática em **NestJS**, focado na criação de uma API RES
 - 🧪 Testes básicos
 - 🧾 CRUD de entidades com validação
 - 🗂️ Estrutura de pastas limpa e escalável
-- 📦 Integração com banco de dados PostgreSQL (ou outro)
+- 📦 Integração com banco de dados sqlite
 
 ---
 
